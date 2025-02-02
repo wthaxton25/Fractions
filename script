@@ -1,0 +1,16 @@
+function calculate() {
+    const numerator = document.getElementById('numerator').value;
+    const denominator = document.getElementById('denominator').value;
+    const resultDiv = document.getElementById('result');
+
+    if (numerator && denominator) {
+        if (denominator == 0) {
+            resultDiv.innerHTML = "Denominator cannot be zero.";
+        } else {
+            const fraction = numerator / denominator;
+            resultDiv.innerHTML = `The fraction is: ${numerator}/${denominator} = ${fraction}`;
+        }
+    } else {
+        resultDiv.innerHTML = "Please enter both numerator and denominator.";
+    }
+}
